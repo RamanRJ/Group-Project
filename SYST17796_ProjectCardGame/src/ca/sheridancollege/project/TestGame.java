@@ -12,10 +12,11 @@ package ca.sheridancollege.project;
 public class TestGame {
     
     static TestPlayer p1 = new TestPlayer();
+    static int compScore = 0;
+    static int userScore = 0;
     
     public static void main (String [] args){
-            int compScore = 0;
-            int userScore = 0;
+            
             
             
             
@@ -49,6 +50,9 @@ public class TestGame {
  
         
     }
+       winner();
+    }
+       public static void winner(){
        System.out.println( "\nFinal Score:\nYour Score - " + userScore);
        System.out.println("Computer's Score - "+ compScore);
        if(userScore==5){
@@ -59,5 +63,6 @@ public class TestGame {
            
            
        }
-    }
-    }
+    
+  }
+}
