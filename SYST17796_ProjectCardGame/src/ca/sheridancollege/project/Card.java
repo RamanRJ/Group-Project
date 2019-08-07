@@ -50,15 +50,5 @@ public class Card {
         this.value = value;
     }
     
-    public int randomCard(){
-     int r = (int) (Math.random() *  13 + 1);
-     return r;
-    }
-   
-    public int randomSuit(){
-     int r = (int) (Math.random() * 4);
-     return r;
-    }
-   
-    
+       
 }
