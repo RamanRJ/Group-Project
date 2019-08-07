@@ -18,44 +18,45 @@ public class GroupOfCards extends Card
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
-    private int size;//the size of the grouping
-    
-    public GroupOfCards(int givenSize)
-    {
-        size = givenSize;
-    }
-    
-    /**
-     * A method that will get the group of cards as an ArrayList
-     * @return the group of cards.
-     */
-    public ArrayList<Card> showCards()
-    {
-        return cards;
-    }
-    
-    public void shuffle()
-    {
-        Collections.shuffle(cards);
-    }
+    private static ArrayList <Card> compcards = new ArrayList<Card>();
+    private static ArrayList <Card> usercards = new ArrayList<Card>();
 
-    /**
-     * @return the size of the group of cards
-     */
-    public int getSize() {
-        return size;
-    }
-
-    /**
-     * @param givenSize the max size for the group of cards
-     */
-    public void setSize(int givenSize) {
-        size = givenSize;
-    }
-    
-    public String toString(){
+         public static ArrayList<Card> getCompCards(){
+        //Creating compcards
+        for(int dex =0; dex < 2; dex++){ 
+          String str = SUITS[dex];
+        for (int i=0; i < 13; i++)
+        {
+            Card c = new Card();
+            c.setSuit(str);
+            c.setValue(VALUES[i]);
+            compcards.add(c);
+        }
+        }
+        return compcards;
+         }
         
+         public static ArrayList<Card> getUserCards(){
+        //Creating usercards
+        for(int dex =2; dex < 4; dex++){ 
+          String str = SUITS[dex];
+        for (int i=0; i < 13; i++)
+        {
+            Card c = new Card();
+            c.setSuit(str);
+            c.setValue(VALUES[i]);
+            usercards.add(c);
+        }
+        return usercards;
+        }
+        
+        //Printing the cards of compcards array
+        //System.out.println((compcards.get(0)).getValue() + "," +(compcards.get(0)).getSuit());
+        //System.out.println((compcards.get(1)).getValue() + "," +(compcards.get(1)).getSuit());
+        //System.out.println(compcards.toString());
+        
+        return compcards;
     }
+        
     
 }//end class
