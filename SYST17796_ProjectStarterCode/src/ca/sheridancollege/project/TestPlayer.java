@@ -12,13 +12,22 @@ import java.util.Scanner;
 public class TestPlayer extends Player {
     
 
-    
+    String id;
     public String play(){
     Scanner in = new Scanner(System.in);
      System.out.println("Enter your Player ID");
-     String id=in.nextLine();
+     id=in.nextLine();
      return id;
      
     }
+    public static boolean checkName(String id){
+    if(id==""){
+    return false;
+}
+    else{
+        return true;
+    }
     
+
+    }
 }
