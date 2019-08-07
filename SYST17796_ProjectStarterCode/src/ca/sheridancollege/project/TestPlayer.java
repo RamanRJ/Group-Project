@@ -14,11 +14,13 @@ public class TestPlayer extends Player {
 
     String id;
     public String play(){
-    Scanner in = new Scanner(System.in);
+     Scanner in = new Scanner(System.in);
+
      System.out.println("Enter your Player ID");
      id=in.nextLine();
-     return id;
-     
+     return id;    
+    
+    
     }
     public static boolean checkName(String id){
     if(id==""){
