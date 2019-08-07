@@ -9,7 +9,7 @@ package ca.sheridancollege.project;
  *
  * @author hyper
  */
-public class TestGame {
+public class TestGame{
     
     static TestPlayer p1 = new TestPlayer();
     
